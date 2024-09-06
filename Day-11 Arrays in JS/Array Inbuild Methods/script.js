@@ -128,15 +128,15 @@ console.log(`Sum is: ${sum}`) */
 const arr=[1,2,3,4,5]
 
 arr.forEach((val,i,array)=>{
-     array[i]=val**2
+     array[i]=val**2;
 })
 console.log(arr)
 
 arr.forEach((val,i,array)=>{
     array[i]=Math.sqrt(val)
 })
-console.log(arr) */
-
+console.log(arr) 
+*/
 /*
 let arr=[1,2,3,4,5]
 let sum=0;
@@ -145,15 +145,15 @@ const output=arr.map((val,index,array)=>{
 })
 console.log(sum)  */
 
-/*
+/**/
 let arr=[1,2,3,4,5]
 let output=[]
 output.push(arr.reduce((acc,val,index,array)=>{
-    acc=acc+val;   
+    acc=(acc+val)  
     return acc;
-},0))
+},[]))
       
-console.log(output) */
+console.log(output) 
 
 
 
