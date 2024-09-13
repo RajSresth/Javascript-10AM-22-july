@@ -40,6 +40,7 @@ console.log(parent===animal)
 // console.log(dog.hasOwnProperty("sound"))
 // console.log(dog.hasOwnProperty("bark")) */
 
+/*
 const animal={
     type:"Animal",
     sound(){
@@ -63,6 +64,37 @@ const human=Object.create(animal,{name:{
 
 human.name="Alia Bhatt"                   
 // delete human.age
-console.log(human.name)
+console.log(human.name) */
+
+class Animal
+{
+    constructor(name)
+    {
+        this.name=name;
+    }
+    sound()
+    {
+        console.log(`${this.name} can sound..!!`)
+    }
+}
+
+class Dog extends Animal
+{
+    constructor(name,breed)
+    {
+        super(name)
+        this.breed=breed
+    }
+    bark(){
+        console.log(`Wooooo Woooooo`)
+    }
+}
+
+const dog1=new Dog("Rex","Pitbull")
+
+dog1.sound()
+
+console.log(dog1.hasOwnProperty("name"))
+console.log(dog1)
                                   
 
