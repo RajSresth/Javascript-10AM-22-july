@@ -1,0 +1,35 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;   
+    padding-left: 50px;
+}
+
+button{
+    padding: 10px 40px;
+    font-weight: bold;
+    font-size: 22px;
+    background-color: rgb(22, 143, 195);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    scale: 1;
+    transition:background 0.3s ease,
+                scale 0.3s ease;
+    position: relative;
+    top: 50px;
+    margin-left: 20px;
+}
+button:hover{
+    scale: 1.15;
+    background-color: #000;
+}
