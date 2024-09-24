@@ -1,27 +1,34 @@
-// const btn1=document.getElementById("btn1")
-// const btn2=document.getElementById("btn2")
-// let windowName;
-// btn1.addEventListener("click",()=>{
-//     windowName="myWindow"
-//     window.open("https://open.spotify.com",windowName,"width=600, height=380")
-// })
+const btn1=document.getElementById("btn1")
+const btn2=document.getElementById("btn2")
+let windowName;
+btn1.addEventListener("click",()=>{
+    
+    windowName=window.open("","chombu","width=600, height=380");
+    windowName.onload = () => {
+        console.log("Window loaded successfully.");
+    };
 
-// btn2.addEventListener("click",()=>{
-//     windowName.moveTo(768,365)
-//     windowName.focus(); 
-// })
+    windowName.onerror = (err) => {
+        console.error("Failed to load the window.", err);
+    };
+})
 
-const btn1 = document.getElementById("btn1");
-const btn2 = document.getElementById("btn2");
-let myWindow;
+btn2.addEventListener("click",()=>{
+    windowName.moveBy(768,365)
+    // windowName.focus(); 
+})
 
-btn1.addEventListener("click", () => {
-    myWindow = window.open("https://open.spotify.com", "myWindow", "width=600,height=380");
-});
+// const btn1 = document.getElementById("btn1");
+// const btn2 = document.getElementById("btn2");
+// let myWindow;
 
-btn2.addEventListener("click", () => {
-    if (myWindow) { // Check if myWindow is not null
-        myWindow.moveBy(500,300)
-        myWindow.focus();
-    }
-});
+// btn1.addEventListener("click", () => {
+//     myWindow = window.open("https://open.spotify.com", "myWindow", "width=600,height=380");
+// });
+
+// btn2.addEventListener("click", () => {
+//     if (myWindow) { // Check if myWindow is not null
+//         myWindow.moveBy(500,300)
+//         myWindow.focus();
+//     }
+// });
