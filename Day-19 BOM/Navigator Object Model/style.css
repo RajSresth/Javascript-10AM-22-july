@@ -1,0 +1,41 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgray;
+}
+code{
+    background-color: black;
+    color: white;
+    width: 800px;
+    height: 200px;
+    position: relative;
+    padding-left: 100px;
+    padding-top: 80px;
+}
+code p{
+    font-size: 32px;
+}
+button{
+    position: absolute;
+    padding: 12px 50px;
+    top: 0;
+    right: 0;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: rgb(15, 97, 190);
+    font-size: 18px;
+    cursor: pointer;
+}
