@@ -13,3 +13,39 @@ bar.addEventListener("click",()=>{
     span3.classList.toggle("right")
 
 })
+
+
+// For Hero Section
+const images=document.querySelectorAll(".slide");
+const imageLength=images.length
+let count=0;
+
+images.forEach((val,ind)=>{
+    val.style.left=`${ind * 100}%`  
+})
+
+
+function prev()
+{
+   if(count!==0)
+   {
+    count--;
+    slideImg()
+   }
+}
+
+function next()
+{
+    if(count<imageLength-1)
+    {
+        count++
+        slideImg()
+    }
+}
+
+function slideImg()
+{
+    images.forEach(val=>{
+        val.style.transform=`translateX(-${count * 100}%)`
+    })
+}

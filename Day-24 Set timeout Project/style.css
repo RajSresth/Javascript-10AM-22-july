@@ -115,3 +115,44 @@ body{
     
 }
 
+/* Hero Section Design*/
+
+#hero{
+    width: 100%;
+    height: calc(100% - 100px);
+    background-image:linear-gradient(#e7c6ff,#42a5f5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#hero .slider-container{
+    width: 75%;
+    height: 550px;
+    position: relative;
+    overflow: hidden;
+}
+#hero .slider-container .slide{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+button{
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background-color: #000000c0;
+    color: #fff;
+    font-size: 18px;
+}
+button.prev{
+    left: 10px;
+}
+button.next{
+    right: 10px;
+}
