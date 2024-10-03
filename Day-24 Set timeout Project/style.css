@@ -136,6 +136,7 @@ body{
     height: 100%;
     position: absolute;
     object-fit: cover;
+    transition: 1s ease;
 }
 button{
     width: 40px;

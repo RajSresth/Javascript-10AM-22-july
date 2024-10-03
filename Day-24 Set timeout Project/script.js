@@ -19,6 +19,7 @@ bar.addEventListener("click",()=>{
 const images=document.querySelectorAll(".slide");
 const imageLength=images.length
 let count=0;
+let intervalId;
 
 images.forEach((val,ind)=>{
     val.style.left=`${ind * 100}%`  
@@ -29,8 +30,10 @@ function prev()
 {
    if(count!==0)
    {
+    stopAutoSlide()
     count--;
     slideImg()
+    startAutoSlide()
    }
 }
 
@@ -38,8 +41,10 @@ function next()
 {
     if(count<imageLength-1)
     {
+        stopAutoSlide()
         count++
         slideImg()
+        startAutoSlide()
     }
 }
 
@@ -49,3 +54,16 @@ function slideImg()
         val.style.transform=`translateX(-${count * 100}%)`
     })
 }
+
+
+function startAutoSlide()
+{
+    intervalId=setInterval(next,1000)
+}
+function stopAutoSlide()
+{
+    clearInterval(intervalId)
+}
+
+
+startAutoSlide()
