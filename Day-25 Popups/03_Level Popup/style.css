@@ -1,0 +1,117 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100vw;
+    height: fit-content;
+}
+header{
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline:100px ;
+}
+header .logo{
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+}
+header nav{
+    display: flex;
+    gap: 30px;
+}
+header nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    padding: 5px 20px;
+}
+
+
+section{
+    width: 100%;
+    height: calc(100vh - 100px);
+    background-image:linear-gradient(#e7c6ff,#42a5f5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section h1{
+    font-size: 105px;
+    color: white;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: rgba(0,0,0,0.5);
+}
+.myPopup{
+    width: 450px;
+    height: 320px;
+    background-color: white;
+    color: black;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 1000;
+    padding: 20px;
+    box-shadow: 0px 0px 12px rgba(0,0,0,0.5);
+    transform: translate(-50%,-50%) scale(0);
+    opacity: 0;
+    transition:transform 0.3s ease-in-out,
+                opacity 0.3s ease-in-out;
+}
+.myPopup .tick{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: auto;
+}
+.myPopup .tick img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.myPopup h3{
+    font-size: 25px;
+    text-align: center;
+    margin-block:35px 25px;
+}
+.myPopup .btn-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.myPopup .btn-container button{
+    padding: 12px 45px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: black;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+div.myPopup.show{
+    transform: translate(-50%,-50%) scale(1);
+    opacity: 1;
+}
