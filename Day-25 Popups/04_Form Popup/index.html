@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Popup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">pixelPerfect</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Career</a>
+            <a href="#">Service</a>
+        </nav>
+    </header>
+   <section>
+    <h1>Welcome to my Website!</h1>
+   </section>
+
+   <!-- Overlay Design -->
+    <div class="overlay"></div>
+    <div class="popup">
+        <div class="cross">
+            <span></span>
+            <span></span>
+        </div>
+        <div class="btn-container">
+            <button id="btn1">Login</button>
+            <button id="btn2">Signup</button>
+        </div>
+        <!-- Login Form -->
+        <form action="#" class="myform" id="login">
+            <h2>Login Form</h2>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="xyz@gmail.com" required>
+
+            <label for="pass">Password</label>
+            <input type="password" id="pass" placeholder="at least 6 characters" required>
+
+            <button type="submit">Submit</button>
+            <button type="reset">Cancel</button>
+        </form>
+
+        <!-- Signup Form -->
+        <form action="#" class="myform" id="signup">
+            <h2>Signup Form</h2>
+
+            <label for="name">Name</label>
+            <input type="text" id="name" required placeholder="your fullname">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="xyz@gmail.com" required>
+
+            <label for="pass">Password</label>
+            <input type="password" id="pass" placeholder="at least 6 characters" required>
+
+            <button type="submit">Submit</button>
+            <button type="reset">Cancel</button>
+        </form>
+    </div>
+   
+    
+    <script src="script.js"></script>
+</body>
+</html>
