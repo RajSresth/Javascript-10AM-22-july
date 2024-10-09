@@ -1,0 +1,64 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: lightgray;
+}
+section{
+    padding: 20px 100px;
+    text-align: center;
+}
+section button{    
+    padding: 12px 45px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+section .card-container{
+    width: 100%;
+    height: auto;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;    
+    padding:30px 0;
+}
+
+section .card-container .card{
+    width: 260px;
+    height: 300px;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.75);
+}
+section .card-container .card .profile{
+    width: 100%;
+    height: 80%;
+    background-color: teal;
+}
+section .card .profile img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section .card h4{
+    font-size: 18px;
+    margin: 10px 0 5px;
+}
+section .card h5{
+    font-size: 16px;
+}
